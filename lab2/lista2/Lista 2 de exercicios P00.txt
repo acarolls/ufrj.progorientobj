@@ -1,0 +1,16 @@
+1. 
+A programação modular segue um fluxo único de funções, as quais possuem acesso aos dados a todo momento e podem modificá-los. Já a programação orientada a objetos se baseia na criação de objetos nas quais os dados são distribuídos e manipulados pelos métodos. Nesta é possível que os próprios objetos interajam entre si.
+
+2. 
+As classes funcionam como moldes de objetos, ou seja, definem regras gerais para criar um objeto (seus atributos e métodos). Os objetos são a materialização das classes. Eles podem ser criados com propriedades distintas entre si, ainda que alguns aspectos podem ser semelhantes.
+
+3.
+Atributo de objeto- os atributos de objeto são variáveis que pertencem aos objetos de uma classe
+
+Atributo de classe- os atributos de classe são variáveis que pertencem apenas a uma classe
+
+Método de objeto- funções declaradas dentro do objeto, acessível apenas para ele
+
+Método de classe- funções declaradas em uma classe, as mesmas são repassadas para todos os objetos instanciados pela classe.
+
+

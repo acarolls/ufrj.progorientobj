@@ -1,0 +1,9 @@
+1. No padrão Observer, quais os benefícios de se implementar uma interface Emissor nas classes que são observadas?
+	A implementação de uma interface Emissor padronizaria as regras de negócio indispensáveis para todas as outras classes que deverão ser emissoras dentro de um projeto, permite a manipulação de diferentes emissores em conjunto (assim como é feito com os assinantes), diminui o risco de esquecimento de algum método obrigatório e, por fim, melhora a semântica dos dados tratados no escopo do problema.
+
+2. Qual a diferença entre o padrão Observer clássico e o padrão Lazy Observer? 
+	No observer clássico, cada vez que o estado do evento observado muda em um emissor, é necessária a notificação e passagem da mudança (atualização de status) imediata para todos os observadores. Ainda que a ideia seja interessante, essa lógica de projeto pode gerar gasto de desempenho exagerado visto a alta taxa de emissão de novos eventos. Para amenizar essa desvantagem, foi criado o Lazy Observer, deixando que os observadores sejam notificados/recebam dados apenas quando a passagem de informação é realmente necessária, ou seja, o subscriber é responsável por solicitar updates para o emissor. Dessa maneira, é possível reduzir o processamento desnecessário.
+
+3. Em qual contexto o padrão Lazy Observer se faz muito mais vantajoso que o Observer tradicional?
+	O padrão de projeto Lazy Observer se mostra mais vantajoso em situações nas quais as atualizações de eventos são frequentes, mas os observadores não precisam de atualizações em tempo real; em projetos nos quais o custo de processamento das notificações é alto; em projetos no qual a escalabilidade e desempenho são críticos.
+

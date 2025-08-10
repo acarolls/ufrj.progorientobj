@@ -1,0 +1,44 @@
+1. Diferencie classe abstrata e interface.
+	A classe abstrata é uma classe que pode ter métodos abstratos, concretos e estáticos, com qualquer tipo de atributo. Ela serve como base para as outras classes, que devem fornecer a implementação de métodos abstratos herdados. Sendo assim, é utilizada para representar relações de herança. Já a interface é um tipo especial de classe em java que contém apenas métodos abstratos (não podem ser estáticos e seus atributos só podem ser do tipo public static final). Ela é utilizada para representar um contrato que classes devem cumprir, permitindo a implementação de múltiplas interfaces em apenas uma classe.
+
+
+
+2. Para que servem os tipos genéricos no Java? 
+	Os tipos genéricos são usados em classes, interfaces, atributos e métodos para deixar uma funcionalidade adaptável a diferentes tipos de dados sem a necessidade de reescrever a funcionalidade. São vistos como templates que definem o tipo de dado usado somente em tempo de execução.  Eles foram criados para oferecer uma maior flexibilidade e segurança na manipulação de coleções e outros tipos de dados parametrizados, reduzindo a necessidade de conversões explícitas e evitando erros em tempo de execução, facilitando a consolidação/reutilização do código e detecção de erros em tempo de compilação. 
+
+
+3. O que são padrões de projeto? Qual sua importância em POO? 
+	Os padrões de projeto são designs genéricos aplicáveis em muitos problemas, mas que exigem adaptação a cada caso particular de cada programa. Eles são técnicas que visam organizar e facilitar a programação, aumentando a clareza de comunicação entre desenvolvedores. Com relação a sua importância em POO, temos que a promoção de soluções já validadas pela comunidade de programadores facilita a ação e comunicação entre si desses profissionais frente a problemas comuns; a utilização de padrões promovem a separação de responsabilidades, o encapsulamento e baixo acoplamento, que são princípios essenciais da programação orientada a objetos; por fim, a aplicação de padrões torna o sistema mais flexível e preparado para mudanças. 
+
+
+4. Explique o padrão Singleton com suas palavras e destaque o que é preciso fazer na classe
+para ela se tornar um Singleton.
+	O padrão de projeto Singleton é uma técnica de POO que se apoia na criação de apenas uma instância de uma classe, sendo ela compartilhada por toda a aplicação. Esse padrão é feito de maneira que os atributos e métodos possam ser utilizados em todo o programa, além de que seu construtor é feito de forma que instanciar mais que um objeto é impossível. Para uma classe se tornar um Singleton, precisamos criar uma instância dela mesma, criar um método construtor privado e, por fim, ter um método getSingleton() capaz de verificar a existência ou não da instância: se não, deverá criá-la, impedindo a criação de qualquer outra instância no decorrer da aplicação.
+
+public class Singleton {
+	private static Singleton instance;
+	
+	private Singleton() {
+	//configurações iniciais, se necessário
+	}
+	
+	public static Singleton getSingleton() {
+		if(instance == null)
+			instance = new Singleton();
+		
+		return instance;
+	}
+	
+	//outros métodos, se precisar
+
+}
+
+
+5. Explique o padrão de projeto Factory destacando a principal vantagem de se usar esse
+padrão e os cuidados que o programador precisa ter.
+	O padrão de projeto Factory simula uma fábrica na criação de objetos, ou seja, centraliza em um único método a criação e retorno de objetos de classes distintas, com construtores distintos, melhorando a organização do código e favorecendo sua manutenção e escalabilidade (uma vez que a adição de novas classes ou tipos de objetos pode ser feita apenas ajustando ou estendendo a fábrica, sem que o código cliente precise ser alterado). Com relação aos cuidados, o programador deve tomar nota de não acumular muitos tipos de objetos, uma vez que o código da fábrica pode se tornar complexo ou difícil de gerenciar em função das diversas condições criadas; o programador deve não depender em excesso da fábrica, uma vez que pode acabar criando um ponto único de falha; e, por fim, o programador deve verificar se realmente deve ser aplicável o padrão de projeto em seu código, uma vez que ela pode não adicionar lógica de criação complexa e servir apenas como uma maneira de contornar o código direto.
+
+
+
+
+

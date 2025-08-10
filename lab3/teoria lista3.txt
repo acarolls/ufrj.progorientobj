@@ -1,0 +1,15 @@
+
+1. 
+O ato de encapsulamento consiste em isolar dados e a sua implementação do restante da aplicação.
+Para realizar tal processo é necessário que as regras estejam centralizadas na classe.
+
+2.
+O modificador de visibilidade public em um atributo de classe permite que todas as classes do projeto tenham acesso a este atributo. Já a ausência de modificador de visibilidade (default ou padrão) implica que somente as classes do próprio pacote possuem acesso.
+
+3.
+Pacotes são conjuntos de classes localizadas na mesma estrutura hierárquica de diretórios. Eles permitem organizar melhor o código e permitem reutilizar identificadores, sendo que cada pacote pode conter subpacotes.
+
+4.
+A palavra chave this serve para autorreferenciar um objeto. Em um método de objeto, quando precisamos modificar um atributo com a mesma nomenclatura de algum atributo do objeto, dessa maneira conseguimos distinguir na manipulação dos dados.
+
+

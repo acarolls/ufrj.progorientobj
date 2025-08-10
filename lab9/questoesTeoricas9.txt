@@ -1,0 +1,19 @@
+1. Em POO, o que são exceções? Qual o principal motivo para se usar exceções sem um programa?
+	As exceções são eventos inesperados ou estranhos dentro de um fluxo de negócio, que podem ocorrer durante a execução de um programa. Elas permitem que o programa trate os problemas destacados de forma estruturada, garantindo que a execução não seja interrompida abruptamente e que o programa reaja adequadamente ao problema.
+
+2. Como no Java é possível criar uma exceção personalizada? 
+	No java, é possível criar exceções personalizadas utilizando a herança dos dois tipos de classes: RuntimeException e Exception. Para o primeiro, o compilador não exigirá tratamento explícito, já para o segundo, é exigido pela JVM que a exceção seja tratada com um bloco try/catch ou lançada com o throw/throws.
+
+3. Qual a diferença entre lançar uma exceção e capturar uma exceção? 
+	Lançar uma exceção significa interromper o fluxo normal do programa e indicar que um erro ou evento inesperado ocorreu. Quando ela é lançada, o controle do programa é imediatamente transferido para o bloco do código (caso exista) que irá capturá-la e tratá-la. Já a captura de uma exceção significa interceptar uma exceção que foi lançada, a partir do uso do bloco try/catch. No catch, o programador define como o programa deve responder ao erro. Esse último permite que o programa continue a execução ou tome alguma medida de recuperação, ao invés de terminar abruptamente.
+
+4. Um método pode capturar uma exceção lançada por ele mesmo?
+	Sim, um método pode capturar uma exceção que ele mesmo lançou, desde que o lançamento e a captura ocorram no mesmo bloco try-catch. Isso significa que o throw deve estar dentro de um bloco try, seguindo de um bloco catch para capturar a exceção. Apesar de ser possível, não é comum e tão quanto é recomendado
+
+5. Vimos em aula que toda exceção é, essencialmente, uma classe. Uma exceção poderia então ser estática? Explique.
+	Uma exceção não pode ser estática porque, em java, as exceções são projetadas para representar instâncias específicas de erros que podem ocorrer durante a execução do programa. Isso significa que cada exceção carrega informações contextuais únicas, como mensagens de erro.
+
+6. Qual a diferença entre exceções checked e exceções unchecked?
+
+	As unchecked (ou runtime) exceptions são mais conhecidas como erros oriundo de problemas facilmente evitáveis pelo programador, nas quais o Java não obriga a tratá-las com try/catch. Já as checked exceptions obrigam o método chamador a tratar essas exceções, sendo que, caso não haja tratamento, o programa não compila. Por fim, o tratamento de uma exceção pode ser feito com o bloco try/catch ou com throw/throws.
+

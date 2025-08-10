@@ -1,0 +1,23 @@
+1. Explique o padrão de projeto Observer (Publisher/Subscriber). Qual o seu principal
+benefício?
+	O padrão de projeto Observer cria uma lógica de programação na qual há uma divisão de papéis entre duas classes: a Publisher/Emissora, que gera eventos, e a Observer/Subscriber/Observadora, que representa classes que devem estar antenadas nos eventos e mudanças ocorridos, sem que ambas as duas se conheçam para obter baixo acoplamento. Tal baixo acoplamento é o principal benefício do design apresentado, visto que promove flexibilidade extensibilidade do sistema.
+
+2. Além de “Observer” e “Publisher / Subscriber”, por qual outro nome é também
+conhecido esse mesmo padrão?
+Ela também e chamada de Event/Listener, que é um nome que deixa mais evidente o propósito do padrão de projeto.
+
+3. No padrão Publisher/Subscriber, por que é importante que as classes que “escutam”
+eventos implementem uma interface Observer?
+	A criação da interface permite que defina um contrato a ser seguido à risca de acordo com as regras do design de projeto, ou seja, serve como guia para a montagem da classe dos observadores, em função dos métodos obrigatórios, e facilita a compreensão do código com o uso do padrão pré-indicado. Por fim, promove maior compatibilidade, visto que é possível que haja mais que um observador esperando por atualização de algum evento específico. 
+
+4. Os padrões Observer, Singleton e Factory são mutuamente excludentes em um projeto,
+ou poderiam ser todos implementados em uma mesma solução? Explique.
+	Os padrões poderiam sim ser implementados em uma mesma solução. Uma vez que são designs aplicados para certos tipos de situações, de acordo com a necessidade de um programa, o Singleton, Factory e Publisher/Observer podem ser utilizados, ao mesmo tempo, em alguma aplicação, de maneira a ajudar a modularizar o sistema, facilitar a compreensão das partes, permitir a escalabilidade e reduzir o acoplamento.
+
+5. Qual a diferença fundamental entre uma lista (List) e um conjunto (Set) da API
+Collections do Java?
+	A lista permite duplicatas e mantém a ordem de inserção. Já o set não permite duplicata e a ordem dos elementos pode variar.
+
+6. Ao percorrer-se um array de objetos, como saber quais posições vinculam-se a uma
+instância válida e quais não?
+	Ao percorrer um array de objetos em Java, é possível identificar quais posições contêm uma instância válida (ou seja, um objeto instanciado) e quais não, verificando se o valor da posição é null. Em Java, quando um array de objetos é criado, ele é inicialmente preenchido com null em todas as suas posições, a menos que explicitamente inicializado com objetos.

@@ -1,0 +1,34 @@
+1.
+Agregação representa um relacionamento entre objetos no qual não há dependência existencial e exclusividade. 
+Nesse sentido, a remoção de um dos componentes de uma agregação, o outro não perde sentido de existência.
+
+Composição representa uma relação de interdependência existencial, isso é, se uma classe A 
+é composta de uma classe B, um ou mais objetos de B devem ser criados automaticamente, ao mesmo tempo que,
+se um objeto de A é excluído, consequentemente os objetos de B também.
+
+Herança representa a criação de classes derivadas de uma classe maior, ou seja, a superclasse.
+Esse paradigma permite o processo de especialização das classes, herdando, assim, os atributos e métodos de
+uma outra classe acima (mais geral).
+
+
+2. 
+As classes abstratas são um tipo de classe que não é instanciada, ou seja, ela não possui
+método construtor e são úteis quando é desejável que uma classe seja utilizada apenas para herança, por
+não representar algo concreto o suficiente para ser um objeto na modelagem.
+
+3.
+Sim, uma classe abstrata pode herdar de outra classe abstrata. Uma classe abstrata pode
+herdar de outra classe abstrata para reusar código, especializar comportamentos, 
+e forçar a implementação de métodos em subclasses concretas. Isso faz parte da flexibilidade da orientação a objetos e permite criar estruturas hierárquicas robustas.
+
+4. 
+A utilização de Inner class está diretamente relacionada com o conceito de composição. Dessa maneira, quando queremos 
+representar uma situação de dependência existencial entre duas classes, utilizamos as inner class.
+
+5. 
+A utilização de inner class implica em uma dependência e associação composicional, na qual
+a existência de uma estará sempre atrelada da existência da outra, ou seja, o ciclo de vida de um está diretamente relacionado a de outra.
+
+Com relação a herança, estamos trabalhando com o paradigma de especialização, ou seja,
+uma troca de tipos, sendo possível a passagem de atributos e métodos, assim como sua adição e sobrescrita.
+ 
