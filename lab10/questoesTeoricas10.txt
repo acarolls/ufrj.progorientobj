@@ -1,0 +1,16 @@
+1. Por que, para a captura de exceções, recomenda-se o uso do bloco try-with-resources ao invés do tradicional try-catch?
+	O bloco tradicional pode não ser capaz de liberar todos os recursos quando uma exceção ocorre (ou seja, na utilização de projetos com arquivos, conexões com banco de dados, sockets, entre outros). Por isso, utilizamos 
+try-with-resources para usufruir de múltiplos recursos (que serão garantidamente liberados), com uma simplificação da gestão de recursos ao garantir que sejam fechados automaticamente, sem correr risco de vazamento de recursos, acompanhado de uma notação mais sucinta e com maior clareza.
+
+2. Ao criarmos uma classe, o que precisamos fazer para que a criação de suas instâncias (new…) seja suportada por um  bloco try-with-resources?
+	Para ser suportada por um bloco try-with-resources, uma classe criada precisa implementar a interface java.lang.AutoCloseable. Essa interface requer a implementação do método close(), que será chamado automaticamente quando o bloco TWR for encerrado, garantindo que qualquer recurso seja liberado corretamente.
+
+3. Explique: faz sentido o uso de um bloco finally dentro de um try-with-resources? 
+	O bloco finally dentro de um try-with resources pode ser utilizado em situações específicas, mas o recurso mais recente o torna menos necessário, como para registrar logs ou auditoria, para ações adicionais após o fechamento automático 
+e, por fim, para recursos que não implementam a interface AutoCloseable.
+
+4. Diferencie variável de objeto.
+	Em java, uma variável é um espaço na memória que possui identificador, tipo e escopo, a qual pode ser do tipo primitivo (que armazena valores simples e não possuem métodos associados) ou de referência (que determina onde a variável é acessível no código). Um objeto é definido como uma instância de uma classe. Ele possui atributos e comportamente (conhecido como métodos), representando uma entidade ou uma abstração na programação orientada a objetos. Por fim, os objetos são referenciados por variáveis, que guardam seu endereço de memória.
+
+5. Ao atribuir-se null a uma variável, estamos necessariamente eliminando um objeto da memória? Explique.
+	Não, é possível que, apesar de atribuir null a uma variável, o objeto ainda exista na memória. Nesse sentido, um objeto só é eliminado pelo Garbage Collector quando não há mais nenhuma referência para essa instância em tempo de execução. Portanto, a afirmativa apresentada pela questão é incorreta.
